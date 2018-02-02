@@ -1,0 +1,101 @@
+<div class="main-body">
+  <div class="container">
+    <div class="card card-container">
+      <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+      <p id="profile-name" class="profile-name-card"></p>
+      <form class="form-signin form-horizontal" [formGroup]="form">
+
+        <span id="reauth-email" class="reauth-email"></span>
+        <div class="form-group" [ngClass]="displayFieldCss('Username')">
+          <div class="col-sm-12">
+            <label for="Username" class="control-label required">Username</label>
+            <input type="text" id="Username" class="form-control" formControlName="Username" placeholder="Username" autofocus/>
+            <app-field-error-display [displayError]="isFieldValid('Username')"
+                                     errorMsg="Required">
+            </app-field-error-display>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <label for="Password" class="control-label required">Password</label>
+          <input type="password" id="Password" class="form-control" formControlName="Password" placeholder="Password"/>
+          <app-field-error-display [displayError]="isFieldValid('Password')"
+                                   errorMsg="Required">
+          </app-field-error-display>
+        </div>
+
+        <button class="btn btn-lg btn-primary btn-block btn-signin" (click)="onSubmit()">Submit</button>
+        </form>
+    </div>
+    <!--<div id="remember" class="checkbox">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>-->
+    <!--<a href="#" class="forgot-password">
+      Forgot the password?
+    </a>-->
+  </div>
+  </div>
+
+
+
+<!--<form class="form-horizontal" [formGroup]="form">
+  <div class="form-group" [ngClass]="displayFieldCss('name')">
+    <div class="col-sm-12">
+      <label for="name" class="control-label required">Name</label>
+      <input type="text" id="name" class="form-control" formControlName="name">
+      <app-field-error-display [displayError]="isFieldValid('name')" errorMsg="Please inform your name">
+      </app-field-error-display>
+    </div>
+  </div>
+  <div class="form-group" [ngClass]="displayFieldCss('email')">
+    <div class="col-sm-12">
+      <label for="email" class="control-label required">Email</label>
+      <input type="text" id="email" class="form-control" formControlName="email">
+      <app-field-error-display [displayError]="isFieldValid('email')" errorMsg="Please inform your email">
+      </app-field-error-display>
+    </div>
+  </div>
+  <div formGroupName="address">
+    <div class="form-group">
+      <div class="col-md-6" [ngClass]="displayFieldCss('address.street')">
+        <label for="street" class="control-label required">Address</label>
+        <input type="text" id="street" class="form-control" formControlName="street">
+        <app-field-error-display [displayError]="isFieldValid('address.street')" errorMsg="Please inform your address">
+        </app-field-error-display>
+      </div>
+      <div class="col-md-3">
+        <label for="street2" class="control-label">Address 2</label>
+        <input type="text" id="street2" class="form-control" formControlName="street2">
+      </div>
+      <div class="col-md-3" [ngClass]="displayFieldCss('address.zipCode')">
+        <label for="zipCode" class="control-label required">Zip Code</label>
+        <input type="text" id="zipCode" class="form-control" formControlName="zipCode">
+        <app-field-error-display [displayError]="isFieldValid('address.zipCode')" errorMsg="Please inform your zipCode">
+        </app-field-error-display>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-4" [ngClass]="displayFieldCss('address.city')">
+        <label for="city" class="control-label required">City</label>
+        <input type="text" id="city" class="form-control" formControlName="city">
+        <app-field-error-display [displayError]="isFieldValid('address.city')" errorMsg="Please inform your city">
+        </app-field-error-display>
+      </div>
+      <div class="col-md-4" [ngClass]="displayFieldCss('address.state')">
+        <label for="state" class="control-label required">State / Province / Region</label>
+        <input type="text" id="state" class="form-control" formControlName="state">
+        <app-field-error-display [displayError]="isFieldValid('address.state')" errorMsg="Please inform your state">
+        </app-field-error-display>
+      </div>
+      <div class="col-md-4" [ngClass]="displayFieldCss('address.country')">
+        <label for="country" class="control-label required">Country</label>
+        <input type="text" id="country" class="form-control" formControlName="country">
+        <app-field-error-display [displayError]="isFieldValid('address.country')" errorMsg="Please inform your country">
+        </app-field-error-display>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-primary" (click)="onSubmit()">Submit</button>
+  <button class="btn" (click)="reset()">Reset</button>
+</form>-->
