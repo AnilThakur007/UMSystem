@@ -9,13 +9,15 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FieldErrorDisplayComponent } from './field-error-display/field-error-display.component';
 import { HttpClientModule } from '@angular/common/http';
-import { CommonDataService } from './common-data.service';
+import { CommonDataService } from './services/common-data.service';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    FieldErrorDisplayComponent
+    FieldErrorDisplayComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
