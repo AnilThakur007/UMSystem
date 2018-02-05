@@ -3,14 +3,14 @@ import { HttpClient,HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import "rxjs/Rx";
 import "rxjs/add/operator/map";
-import { MembershipUser } from './models/membership-user';
+import { MembershipUser } from '../models/membership-user';
 import { Router, ActivatedRoute } from '@angular/router';
 @Injectable()
 export class CommonDataService {
 
   constructor(private http: HttpClient, private router: Router) { }
 
-  private apiUrl = 'http://localhost:4000/api/';  
+  private apiUrl = 'http://localhost:3000/api/';  
   
   public extractData(res: Response) {
     return res;

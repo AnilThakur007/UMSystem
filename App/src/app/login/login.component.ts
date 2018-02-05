@@ -60,8 +60,8 @@ export class LoginComponent implements OnInit {
             //console.log(_Userid);
           }
           else {
-            $('#spnWrongCred').text("Wrong Username/Password");
-            console.log("No Data");
+            //$('#spnWrongCred').text("Wrong Username/Password");
+            //console.log("No Data");
           }
         },
         error => this.errorMessage = <any>error);

@@ -2,11 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\App",
+    "\\App\\server",
+    "\\App\\server\\routes",
     "\\App\\src",
     "\\App\\src\\app",
     "\\App\\src\\app\\login",
+    "\\App\\src\\app\\models",
+    "\\App\\src\\app\\services",
     "\\NodeApi"
   ],
-  "SelectedNode": "\\App\\src\\app\\membership-user.ts",
+  "SelectedNode": "\\App\\server.js",
   "PreviewInSolutionExplorer": false
 }
